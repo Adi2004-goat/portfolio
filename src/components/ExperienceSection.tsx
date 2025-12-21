@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
-import { Briefcase, Users, TrendingUp } from "lucide-react";
+import { Briefcase, Users, TrendingUp, Building2 } from "lucide-react";
 
 interface Experience {
   title: string;
   organization: string;
+  location: string;
   period: string;
   description: string;
   highlights: string[];
@@ -12,40 +13,44 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    title: "Data Analytics Researcher",
-    organization: "ASU Research Lab",
-    period: "2023 - Present",
-    description: "Conducting exploratory data analysis and building predictive models on large-scale datasets.",
+    title: "Data Analyst Intern",
+    organization: "PricewaterhouseCoopers LLP (PwC)",
+    location: "India",
+    period: "June 2025 – July 2025",
+    description: "Executed data validation and analysis for financial and operational datasets in a data warehousing environment.",
     highlights: [
-      "Processed and analyzed 500K+ records for research insights",
-      "Built automated data pipelines using Python and SQL",
-      "Created interactive dashboards for stakeholder reporting",
+      "Executed 50+ SQL validation tests ensuring 95% accuracy between source data and data marts",
+      "Analyzed 500k+ financial/operational rows to identify 10+ KPIs and revenue drivers",
+      "Co-created Business Requirement Documents (BRDs), reducing managers' data review time by 30%",
+      "Collaborated with developer team on data warehousing projects using Oracle and Hadoop",
+    ],
+    icon: Building2,
+  },
+  {
+    title: "Futures Center Peer (Student Worker)",
+    organization: "Futures Center — The College of Liberal Arts & Sciences (ASU)",
+    location: "Tempe, AZ",
+    period: "Sep 2025 – Present",
+    description: "Analyzing graduate outcomes data to inform advising strategies through data-driven insights.",
+    highlights: [
+      "Analyzing datasets on 1000+ ASU graduates to identify post-graduation outcomes",
+      "Conducting EDA with Python to detect trends/correlations that inform advising strategies",
+      "Delivering visualized reports/dashboards (Seaborn, Matplotlib) to enhance decision-making efficiency",
     ],
     icon: TrendingUp,
   },
   {
-    title: "Tech Event Organizer & Lead",
-    organization: "ASU Hackathon Committee",
-    period: "2022 - Present",
+    title: "Director of Events & Operations",
+    organization: "DevLabs, Arizona State University",
+    location: "Tempe, AZ",
+    period: "April 2024 – Present",
     description: "Leading organization of large-scale hackathons and tech events with 500+ participants.",
     highlights: [
-      "Coordinated 10+ sponsors and managed $50K+ budget",
-      "Led team of 20+ volunteers for event execution",
-      "Grew participation by 40% year-over-year",
+      "Led planning and execution of 20+ hackathons, workshops, and expos engaging 500+ student community",
+      "Collaborated with marketing, finance, and operations teams for seamless logistics and budgeting",
+      "Developed scalable frameworks to expand DevLabs' reach and strengthen ASU's entrepreneurial ecosystem",
     ],
     icon: Users,
-  },
-  {
-    title: "Student Data Analyst",
-    organization: "University Analytics Office",
-    period: "2022 - 2023",
-    description: "Supported institutional research through data collection, cleaning, and visualization.",
-    highlights: [
-      "Automated weekly reporting saving 10+ hours/week",
-      "Developed Python scripts for data quality checks",
-      "Presented findings to senior leadership",
-    ],
-    icon: Briefcase,
   },
 ];
 
@@ -93,8 +98,9 @@ const ExperienceSection = () => {
                       {exp.title}
                     </h3>
                     <p className="text-accent font-medium">{exp.organization}</p>
+                    <p className="text-sm text-muted-foreground">{exp.location}</p>
                   </div>
-                  <span className="text-sm text-muted-foreground mt-1 md:mt-0">
+                  <span className="text-sm text-muted-foreground mt-1 md:mt-0 md:text-right">
                     {exp.period}
                   </span>
                 </div>

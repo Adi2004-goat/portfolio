@@ -42,7 +42,7 @@ const Navigation = () => {
               href="#about"
               className="text-xl font-semibold text-foreground hover:text-accent transition-colors"
             >
-              YN
+              AB
             </a>
 
             {/* Desktop Navigation */}

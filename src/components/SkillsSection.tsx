@@ -7,24 +7,28 @@ interface SkillCategory {
 
 const skillCategories: SkillCategory[] = [
   {
-    title: "Programming & Tools",
-    skills: ["Python", "R", "SQL", "Git", "VS Code", "Jupyter", "Docker", "Linux"],
+    title: "Programming Languages",
+    skills: ["Python", "R", "SQL", "Java", "C", "C++", "MATLAB"],
   },
   {
     title: "Data Science & Analytics",
-    skills: ["Pandas", "NumPy", "Scikit-learn", "Statistical Analysis", "EDA", "A/B Testing", "ETL Pipelines"],
+    skills: ["Pandas", "NumPy", "Scikit-learn", "Seaborn", "Matplotlib", "statsmodels"],
   },
   {
-    title: "Machine Learning & AI",
-    skills: ["TensorFlow", "PyTorch", "XGBoost", "NLP", "Deep Learning", "Time Series", "Feature Engineering"],
+    title: "AI & Machine Learning",
+    skills: ["PyTorch", "TensorFlow", "Transformers (Hugging Face)", "LSTM", "NLP", "Deep Learning"],
   },
   {
-    title: "Data Visualization & BI",
-    skills: ["Tableau", "Power BI", "Matplotlib", "Seaborn", "Plotly", "Streamlit"],
+    title: "Finance & BI Tools",
+    skills: ["yfinance", "Quandl", "Excel (Advanced)", "Tableau", "Power BI"],
   },
   {
-    title: "Finance & Quantitative",
-    skills: ["Financial Modeling", "Risk Analysis", "Bloomberg Terminal", "Econometrics", "Portfolio Analysis"],
+    title: "Developer Tools",
+    skills: ["Git", "Jupyter", "VS Code", "Salesforce", "Firebase", "Google Workspace", "Microsoft 365"],
+  },
+  {
+    title: "Soft Skills",
+    skills: ["Communication", "Teamwork", "Problem-Solving", "Punctuality", "Work Ethic"],
   },
 ];
 

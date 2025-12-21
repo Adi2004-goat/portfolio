@@ -1,25 +1,25 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowUpRight, Phone } from "lucide-react";
 
 const ContactSection = () => {
   const contactLinks = [
     {
       icon: Mail,
       label: "Email",
-      value: "your.email@asu.edu",
-      href: "mailto:your.email@asu.edu",
+      value: "adityabohra.vb@gmail.com",
+      href: "mailto:adityabohra.vb@gmail.com",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/yourname",
-      href: "https://linkedin.com/in/yourname",
+      value: "linkedin.com/in/adityabohra",
+      href: "https://linkedin.com/in/adityabohra",
     },
     {
       icon: Github,
       label: "GitHub",
-      value: "github.com/yourname",
-      href: "https://github.com/yourname",
+      value: "github.com/adityabohra",
+      href: "https://github.com/adityabohra",
     },
   ];
 
@@ -61,7 +61,7 @@ const ContactSection = () => {
               </div>
               <span className="text-sm text-muted-foreground mb-1">{label}</span>
               <span className="text-foreground font-medium text-sm group-hover:text-accent transition-colors flex items-center gap-1">
-                {value.replace("https://", "").replace("mailto:", "")}
+                {label === "Email" ? value : value.replace("https://", "")}
                 <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
               </span>
             </a>
@@ -75,7 +75,7 @@ const ContactSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <a
-            href="mailto:your.email@asu.edu"
+            href="mailto:adityabohra.vb@gmail.com"
             className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all duration-300"
           >
             <Mail size={18} />

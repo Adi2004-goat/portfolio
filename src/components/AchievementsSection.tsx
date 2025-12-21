@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Award, Trophy, GraduationCap, Star } from "lucide-react";
+import { Award, GraduationCap, BookOpen, Trophy } from "lucide-react";
 
 interface Achievement {
   title: string;
@@ -13,29 +13,29 @@ const achievements: Achievement[] = [
   {
     title: "Dean's List with Distinction",
     organization: "Arizona State University",
-    year: "2022 - Present",
-    description: "Maintained 3.8+ GPA across all semesters in Data Science program.",
+    year: "2023 – 2025",
+    description: "Fall '23, Spring '24, Fall '24, Spring '25 — Maintained 3.90 GPA in Data Science program.",
     icon: GraduationCap,
   },
   {
-    title: "1st Place - Data Analytics Hackathon",
-    organization: "ASU Fulton Schools",
+    title: "NAMU Scholarship Recipient",
+    organization: "Arizona State University",
     year: "2023",
-    description: "Built predictive model for urban traffic optimization using real-time data.",
+    description: "Awarded merit-based scholarship for academic excellence and demonstrated potential.",
     icon: Trophy,
   },
   {
-    title: "Undergraduate Research Scholarship",
-    organization: "ASU FURI Program",
-    year: "2023",
-    description: "Awarded funding for ML research in financial risk prediction.",
-    icon: Star,
+    title: "Financial Markets Certification",
+    organization: "Yale University (Coursera)",
+    year: "2024",
+    description: "Completed comprehensive course on financial markets, instruments, and investment strategies.",
+    icon: BookOpen,
   },
   {
-    title: "Outstanding Student Leader",
-    organization: "ASU Student Organizations",
-    year: "2023",
-    description: "Recognized for exceptional contribution to tech community building.",
+    title: "Neural Networks & Deep Learning",
+    organization: "DeepLearning.AI (Coursera)",
+    year: "2024",
+    description: "Mastered fundamentals of neural networks and deep learning architectures.",
     icon: Award,
   },
 ];
@@ -51,10 +51,10 @@ const AchievementsSection = () => {
         className="mb-12"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-          Achievements
+          Achievements & Certifications
         </h2>
         <p className="text-muted-foreground max-w-2xl">
-          Academic honors, competitions, and leadership recognition.
+          Academic honors, scholarships, and professional certifications.
         </p>
       </motion.div>
 
