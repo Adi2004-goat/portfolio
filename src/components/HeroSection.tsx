@@ -4,9 +4,9 @@ import profileImage from "@/assets/profile-placeholder.jpg";
 
 const HeroSection = () => {
   const socialLinks = [
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:your.email@asu.edu", label: "Email" },
+    { icon: Github, href: "https://github.com/adityabohra", label: "GitHub" },
+    { icon: Linkedin, href: "https://linkedin.com/in/adityabohra", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:adityabohra.vb@gmail.com", label: "Email" },
   ];
 
   return (
@@ -23,11 +23,11 @@ const HeroSection = () => {
             Data Science Student
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-            Hi, I'm <span className="text-gradient">Your Name</span>
+            Hi, I'm <span className="text-gradient">Aditya Bohra</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-6 leading-relaxed max-w-xl">
             Undergraduate at <span className="text-foreground font-medium">Arizona State University</span> pursuing 
-            a B.S. in Data Science with a minor in Economics. Passionate about transforming complex data into 
+            a B.S. in Data Science with a minor in Economics (GPA: 3.90). Passionate about transforming complex data into 
             actionable insights through analytics, machine learning, and quantitative finance.
           </p>
           <p className="text-muted-foreground mb-8 leading-relaxed max-w-xl">
@@ -71,7 +71,7 @@ const HeroSection = () => {
             <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden shadow-lg">
               <img
                 src={profileImage}
-                alt="Profile"
+                alt="Aditya Bohra"
                 className="w-full h-full object-cover"
               />
             </div>

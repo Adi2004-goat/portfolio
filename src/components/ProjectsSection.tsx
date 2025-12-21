@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, ExternalLink, Database, LineChart, Brain, BarChart3 } from "lucide-react";
+import { Github, ExternalLink, LineChart, Shield, Building, Bot } from "lucide-react";
 
 interface Project {
   title: string;
@@ -7,39 +7,38 @@ interface Project {
   techStack: string[];
   githubUrl: string;
   liveUrl?: string;
-  icon: typeof Database;
+  icon: typeof LineChart;
 }
 
 const projects: Project[] = [
   {
-    title: "Stock Price Prediction Model",
-    description: "LSTM neural network for predicting stock movements using historical data and technical indicators.",
-    techStack: ["Python", "TensorFlow", "Pandas", "yFinance", "Streamlit"],
-    githubUrl: "https://github.com",
+    title: "Stock Price Predictor System",
+    description: "Built LSTM neural network achieving 92% accuracy for NIFTY 50 stock predictions. Collected 5 stock datasets (2000–2025), engineered technical indicators (SMA, EMA, MACD, RSI), and developed interactive Streamlit dashboard.",
+    techStack: ["Python", "Pandas", "TensorFlow", "LSTM", "Streamlit", "yfinance"],
+    githubUrl: "https://github.com/adityabohra",
     liveUrl: "https://demo.com",
     icon: LineChart,
   },
   {
-    title: "Customer Churn Analytics",
-    description: "End-to-end ML pipeline predicting customer churn with 92% accuracy using ensemble methods.",
-    techStack: ["Python", "XGBoost", "SHAP", "SQL", "Power BI"],
-    githubUrl: "https://github.com",
-    icon: BarChart3,
+    title: "Credit Risk & Fraud Detection System",
+    description: "Analyzed German Credit Risk dataset (1,000+ records) to identify borrower risk patterns. Implemented Logistic Regression and XGBoost achieving AUC > 0.93 with comprehensive comparison reports.",
+    techStack: ["Python", "Scikit-learn", "XGBoost", "Seaborn", "Matplotlib"],
+    githubUrl: "https://github.com/adityabohra",
+    icon: Shield,
   },
   {
-    title: "Real Estate Price Estimator",
-    description: "Regression model analyzing 50+ features to estimate property values with interactive dashboard.",
-    techStack: ["Python", "Scikit-learn", "Plotly", "FastAPI", "Docker"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://demo.com",
-    icon: Database,
+    title: "Savills DataFest'25 Office Leasing Analysis",
+    description: "Partnered with Savills to analyze U.S. tech leasing trends. Used KNN imputation for data cleaning, enriched with Census/labor market data, built Power BI dashboards for market insights.",
+    techStack: ["Python", "Pandas", "NumPy", "Matplotlib", "Power BI"],
+    githubUrl: "https://github.com/adityabohra",
+    icon: Building,
   },
   {
-    title: "NLP Sentiment Analyzer",
-    description: "Transformer-based sentiment analysis on financial news to gauge market sentiment.",
-    techStack: ["Python", "HuggingFace", "BERT", "Flask", "PostgreSQL"],
-    githubUrl: "https://github.com",
-    icon: Brain,
+    title: "KAIRO – AI Red-Teaming Platform",
+    description: "Built automated platform to test and identify security weaknesses in agentic AI systems. Developed scalable modules for attack crafting, orchestration, and result aggregation with clear vulnerability reports.",
+    techStack: ["Python", "FastAPI", "LangChain", "OpenAI API", "Gemini"],
+    githubUrl: "https://github.com/adityabohra",
+    icon: Bot,
   },
 ];
 
@@ -82,7 +81,7 @@ const ProjectsSection = () => {
             </h3>
 
             {/* Description */}
-            <p className="text-muted-foreground mb-4 leading-relaxed">
+            <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
               {project.description}
             </p>
 
