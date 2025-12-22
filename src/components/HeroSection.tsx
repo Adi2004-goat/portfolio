@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, ExternalLink, ChevronDown } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink, ChevronDown, Download } from "lucide-react";
 import { motion } from "framer-motion";
 import profileImage from "@/assets/aditya-profile.jpg";
 
@@ -56,6 +56,14 @@ const HeroSection = () => {
             >
               Get in Touch
               <ExternalLink size={16} />
+            </a>
+            <a
+              href="/AdityaBohra_Resume.pdf"
+              download="AdityaBohra_Resume.pdf"
+              className="px-6 py-3 border border-accent text-accent rounded-lg font-medium hover:bg-accent/10 transition-all duration-300 flex items-center gap-2"
+            >
+              Resume
+              <Download size={16} />
             </a>
           </div>
         </motion.div>
