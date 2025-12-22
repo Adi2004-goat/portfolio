@@ -12,14 +12,14 @@ const ContactSection = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/adityabohra",
-      href: "https://linkedin.com/in/adityabohra",
+      value: "linkedin.com/in/aditya-bohra007",
+      href: "https://www.linkedin.com/in/aditya-bohra007/",
     },
     {
       icon: Github,
       label: "GitHub",
-      value: "github.com/adityabohra",
-      href: "https://github.com/adityabohra",
+      value: "github.com/Adi2004-goat",
+      href: "https://github.com/Adi2004-goat",
     },
   ];
 

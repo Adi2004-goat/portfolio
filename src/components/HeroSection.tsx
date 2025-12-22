@@ -1,11 +1,11 @@
 import { Github, Linkedin, Mail, ExternalLink, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
-import profileImage from "@/assets/profile-placeholder.jpg";
+import profileImage from "@/assets/aditya-profile.jpg";
 
 const HeroSection = () => {
   const socialLinks = [
-    { icon: Github, href: "https://github.com/adityabohra", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com/in/adityabohra", label: "LinkedIn" },
+    { icon: Github, href: "https://github.com/Adi2004-goat", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/aditya-bohra007/", label: "LinkedIn" },
     { icon: Mail, href: "mailto:adityabohra.vb@gmail.com", label: "Email" },
   ];
 
