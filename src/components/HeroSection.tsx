@@ -25,15 +25,8 @@ const HeroSection = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
             Hi, I'm <span className="text-gradient">Aditya Bohra</span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-6 leading-relaxed max-w-xl">
-            Undergraduate at <span className="text-foreground font-medium">Arizona State University</span> pursuing 
-            a B.S. in Data Science with a minor in Economics (GPA: 3.90). Passionate about transforming complex data into 
-            actionable insights through analytics, machine learning, and quantitative finance.
-          </p>
-          <p className="text-muted-foreground mb-8 leading-relaxed max-w-xl">
-            I build data-driven solutions that bridge the gap between raw information and strategic 
-            decision-making. Currently exploring opportunities in data analytics, ML engineering, 
-            and fintech research.
+          <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-xl">
+            I'm an undergraduate student at <span className="text-foreground font-medium">Arizona State University</span> majoring in Data Science with a minor in Economics. I'm passionate about using data-driven insights, statistical modeling, and machine learning to solve real-world problems at the intersection of technology, finance, and decision-making.
           </p>
           
           {/* Social Links */}
