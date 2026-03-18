@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, ExternalLink, LineChart, Shield, Building, Bot } from "lucide-react";
+import { Github, ExternalLink, LineChart, Shield, Building, Bot, Activity } from "lucide-react";
 
 interface Project {
   title: string;
@@ -13,7 +13,7 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Stock Price Predictor System",
-    description: "Built LSTM neural network achieving 92% accuracy for NIFTY 50 stock predictions. Collected 5 stock datasets (2000–2025), engineered technical indicators (SMA, EMA, MACD, RSI), and developed interactive Streamlit dashboard.",
+    description: "Collected & cleaned 5 NIFTY 50 stock datasets (2000–2025); integrated yfinance API for real-time updates. Engineered technical indicators (SMA 50, EMA 50, MACD, RSI) and implemented Linear Regression, Random Forest, and LSTM models achieving 92% accuracy. Built an interactive Streamlit dashboard with prediction graphs/tables.",
     techStack: ["Python", "Pandas", "TensorFlow", "LSTM", "Streamlit", "yfinance"],
     githubUrl: "https://github.com/adityabohra",
     liveUrl: "https://demo.com",
@@ -21,24 +21,31 @@ const projects: Project[] = [
   },
   {
     title: "Credit Risk & Fraud Detection System",
-    description: "Analyzed German Credit Risk dataset (1,000+ records) to identify borrower risk patterns. Implemented Logistic Regression and XGBoost achieving AUC > 0.93 with comprehensive comparison reports.",
+    description: "Cleaned & analyzed the German Credit Risk dataset (1,000+ records); performed EDA to identify borrower risk patterns. Implemented Logistic Regression and XGBoost achieving AUC > 0.93. Built comparison reports (Seaborn/Matplotlib) to demonstrate AI-driven risk management insights.",
     techStack: ["Python", "Scikit-learn", "XGBoost", "Seaborn", "Matplotlib"],
     githubUrl: "https://github.com/adityabohra",
     icon: Shield,
   },
   {
-    title: "Savills DataFest'25 Office Leasing Analysis",
-    description: "Partnered with Savills to analyze U.S. tech leasing trends. Used KNN imputation for data cleaning, enriched with Census/labor market data, built Power BI dashboards for market insights.",
+    title: "Savills – DataFest'25 Office Leasing Analysis",
+    description: "Partnered with Savills to analyze U.S. tech leasing trends and identify emerging, high-potential office markets. Processed data with KNN imputation, enriched with U.S. Census and labor market data. Built interactive Power BI dashboards showcasing cost trends, market shifts, and predictive insights.",
     techStack: ["Python", "Pandas", "NumPy", "Matplotlib", "Power BI"],
     githubUrl: "https://github.com/adityabohra",
     icon: Building,
   },
   {
     title: "KAIRO – AI Red-Teaming Platform",
-    description: "Built automated platform to test and identify security weaknesses in agentic AI systems. Developed scalable modules for attack crafting, orchestration, and result aggregation with clear vulnerability reports.",
+    description: "Built an automated platform to test and identify security weaknesses in agentic AI systems. Developed scalable modules for attack crafting, orchestration, and result aggregation connected to OpenAI, Anthropic, and Gemini models. Generated clear vulnerability reports with recommended fixes.",
     techStack: ["Python", "FastAPI", "LangChain", "OpenAI API", "Gemini"],
     githubUrl: "https://github.com/adityabohra",
     icon: Bot,
+  },
+  {
+    title: "ReForm – Real-Time AI Physiotherapy Assistant",
+    description: "Built a real-time AI physiotherapy assistant using Next.js, React, and TypeScript. Integrated MediaPipe pose detection to extract body landmarks and analyze exercise posture from live webcam input. Implemented vector-based joint angle computation and movement-state logic with interactive analytics dashboards.",
+    techStack: ["Next.js", "React", "TypeScript", "MediaPipe", "Recharts", "Zustand"],
+    githubUrl: "https://github.com/adityabohra",
+    icon: Activity,
   },
 ];
 
@@ -56,7 +63,7 @@ const ProjectsSection = () => {
           Featured Projects
         </h2>
         <p className="text-muted-foreground max-w-2xl">
-          Real-world applications showcasing analytics, machine learning, and data-driven decision making.
+          Real-world applications showcasing financial analytics, machine learning, AI security, and data-driven decision making.
         </p>
       </motion.div>
 
@@ -70,22 +77,15 @@ const ProjectsSection = () => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="group bg-card rounded-xl p-6 md:p-8 border border-border hover:border-accent/30 hover:shadow-lg transition-all duration-300"
           >
-            {/* Icon */}
             <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
               <project.icon className="w-6 h-6 text-accent" />
             </div>
-
-            {/* Title */}
             <h3 className="text-xl font-semibold text-foreground mb-2">
               {project.title}
             </h3>
-
-            {/* Description */}
             <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
               {project.description}
             </p>
-
-            {/* Tech Stack */}
             <div className="flex flex-wrap gap-2 mb-6">
               {project.techStack.map((tech) => (
                 <span
@@ -96,8 +96,6 @@ const ProjectsSection = () => {
                 </span>
               ))}
             </div>
-
-            {/* Links */}
             <div className="flex items-center gap-4">
               <a
                 href={project.githubUrl}

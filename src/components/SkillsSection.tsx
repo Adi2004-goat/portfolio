@@ -12,7 +12,7 @@ const skillCategories: SkillCategory[] = [
   },
   {
     title: "Data Science & Analytics",
-    skills: ["Pandas", "NumPy", "Scikit-learn", "Seaborn", "Matplotlib", "statsmodels"],
+    skills: ["Pandas", "NumPy", "Scikit-learn", "Seaborn", "Matplotlib", "Tableau", "Alteryx", "MS Access", "statsmodels"],
   },
   {
     title: "AI & Machine Learning",
@@ -20,15 +20,15 @@ const skillCategories: SkillCategory[] = [
   },
   {
     title: "Finance & BI Tools",
-    skills: ["yfinance", "Quandl", "Excel (Advanced)", "Tableau", "Power BI"],
+    skills: ["yfinance", "Quandl", "Excel (Advanced)", "Tableau", "Power BI", "statsmodels"],
   },
   {
     title: "Developer Tools",
-    skills: ["Git", "Jupyter", "VS Code", "Salesforce", "Firebase", "Google Workspace", "Microsoft 365"],
+    skills: ["Git", "Jupyter", "VS Code", "Salesforce", "Firebase", "Google Workspace", "Microsoft 365", "Google Collab"],
   },
   {
     title: "Soft Skills",
-    skills: ["Communication", "Teamwork", "Problem-Solving", "Punctuality", "Work Ethic"],
+    skills: ["Leadership", "Communication", "Teamwork", "Problem-Solving", "Punctuality", "Work Ethic"],
   },
 ];
 
@@ -46,7 +46,7 @@ const SkillsSection = () => {
           Skills & Expertise
         </h2>
         <p className="text-muted-foreground max-w-2xl">
-          Technical proficiencies spanning the full data science stack, from data engineering to deployment.
+          Technical proficiencies spanning data science, machine learning, financial analytics, and full-stack development.
         </p>
       </motion.div>
 
