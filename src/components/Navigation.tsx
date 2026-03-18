@@ -30,34 +30,31 @@ const Navigation = () => {
         transition={{ duration: 0.5 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-sm"
+            ? "bg-background/80 backdrop-blur-xl border-b border-border"
             : "bg-transparent"
         }`}
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            {/* Logo */}
             <a
               href="#about"
-              className="text-xl font-semibold text-foreground hover:text-accent transition-colors"
+              className="text-xl font-semibold text-foreground hover:text-accent transition-colors font-mono"
             >
-              AB
+              AB<span className="text-accent">.</span>
             </a>
 
-            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors link-underline"
+                  className="text-sm text-muted-foreground hover:text-accent transition-colors link-underline font-mono"
                 >
                   {link.label}
                 </a>
               ))}
             </div>
 
-            {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden p-2 text-muted-foreground hover:text-foreground transition-colors"
@@ -69,7 +66,6 @@ const Navigation = () => {
         </div>
       </motion.nav>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -77,7 +73,7 @@ const Navigation = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-background/95 backdrop-blur-lg md:hidden pt-20"
+            className="fixed inset-0 z-40 bg-background/95 backdrop-blur-xl md:hidden pt-20"
           >
             <div className="flex flex-col items-center gap-6 p-8">
               {navLinks.map((link) => (
@@ -85,7 +81,7 @@ const Navigation = () => {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-lg text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-lg text-muted-foreground hover:text-accent transition-colors font-mono"
                 >
                   {link.label}
                 </a>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Briefcase, Users, TrendingUp, Building2 } from "lucide-react";
+import { Users, TrendingUp, Building2 } from "lucide-react";
 
 interface Experience {
   title: string;
@@ -8,7 +8,7 @@ interface Experience {
   period: string;
   description: string;
   highlights: string[];
-  icon: typeof Briefcase;
+  icon: typeof Building2;
 }
 
 const experiences: Experience[] = [
@@ -56,23 +56,29 @@ const experiences: Experience[] = [
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="section-container section-padding bg-secondary/30">
+    <section id="experience" className="section-container section-padding relative">
+      {/* Subtle grid background */}
+      <div className="absolute inset-0 grid-pattern opacity-20 pointer-events-none" />
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="mb-12"
+        className="mb-12 relative z-10"
       >
+        <span className="text-accent font-mono text-sm tracking-widest uppercase mb-3 block">
+          // Experience
+        </span>
         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-          Experience
+          Where I've Made Impact
         </h2>
         <p className="text-muted-foreground max-w-2xl">
-          A track record of impact through data-driven analysis, financial modeling, and technical problem-solving.
+          Data-driven analysis, financial modeling, and technical problem-solving across industry and academia.
         </p>
       </motion.div>
 
-      <div className="space-y-6">
+      <div className="space-y-4 relative z-10">
         {experiences.map((exp, index) => (
           <motion.div
             key={exp.title}
@@ -80,11 +86,11 @@ const ExperienceSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-card rounded-xl p-6 md:p-8 shadow-sm border border-border hover:shadow-md transition-all duration-300"
+            className="bg-card rounded-xl p-6 md:p-8 glow-border hover:border-accent/20 hover:shadow-glow transition-all duration-300 group"
           >
             <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-6">
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
                   <exp.icon className="w-6 h-6 text-accent" />
                 </div>
               </div>
@@ -97,7 +103,7 @@ const ExperienceSection = () => {
                     <p className="text-accent font-medium">{exp.organization}</p>
                     <p className="text-sm text-muted-foreground">{exp.location}</p>
                   </div>
-                  <span className="text-sm text-muted-foreground mt-1 md:mt-0 md:text-right">
+                  <span className="text-xs text-muted-foreground mt-1 md:mt-0 md:text-right font-mono bg-secondary px-3 py-1 rounded-full w-fit">
                     {exp.period}
                   </span>
                 </div>
@@ -105,7 +111,7 @@ const ExperienceSection = () => {
                 <ul className="space-y-2">
                   {exp.highlights.map((highlight, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
+                      <span className="w-1 h-1 rounded-full bg-accent mt-2 flex-shrink-0 shadow-[0_0_6px_hsl(185_80%_55%/0.5)]" />
                       {highlight}
                     </li>
                   ))}
