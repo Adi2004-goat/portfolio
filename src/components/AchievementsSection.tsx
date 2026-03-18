@@ -14,14 +14,14 @@ const achievements: Achievement[] = [
     title: "Dean's List with Distinction",
     organization: "Arizona State University",
     year: "2023 – 2025",
-    description: "Fall '23, Spring '24, Fall '24, Spring '25 — Maintained 3.90 GPA in Data Science program.",
+    description: "Fall '23, Spring '24, Fall '24, Spring '25, Fall '25 — Maintained 3.90 GPA in Data Science program.",
     icon: GraduationCap,
   },
   {
     title: "NAMU Scholarship Recipient",
     organization: "Arizona State University",
     year: "2023",
-    description: "Awarded merit-based scholarship for academic excellence and demonstrated potential.",
+    description: "Awarded merit-based scholarship for academic excellence and demonstrated potential in data science.",
     icon: Trophy,
   },
   {
@@ -54,7 +54,7 @@ const AchievementsSection = () => {
           Achievements & Certifications
         </h2>
         <p className="text-muted-foreground max-w-2xl">
-          Academic honors, scholarships, and professional certifications.
+          Academic honors, scholarships, and professional certifications in data science and finance.
         </p>
       </motion.div>
 
@@ -68,27 +68,18 @@ const AchievementsSection = () => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="bg-card rounded-xl p-6 border border-border hover:border-accent/30 hover:shadow-md transition-all duration-300 text-center"
           >
-            {/* Icon */}
             <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
               <achievement.icon className="w-7 h-7 text-accent" />
             </div>
-
-            {/* Year */}
             <span className="text-xs font-medium text-accent uppercase tracking-wider">
               {achievement.year}
             </span>
-
-            {/* Title */}
             <h3 className="text-lg font-semibold text-foreground mt-2 mb-1">
               {achievement.title}
             </h3>
-
-            {/* Organization */}
             <p className="text-sm text-muted-foreground mb-3">
               {achievement.organization}
             </p>
-
-            {/* Description */}
             <p className="text-sm text-muted-foreground leading-relaxed">
               {achievement.description}
             </p>

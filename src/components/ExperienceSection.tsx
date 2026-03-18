@@ -17,12 +17,12 @@ const experiences: Experience[] = [
     organization: "PricewaterhouseCoopers LLP (PwC)",
     location: "India",
     period: "June 2025 – July 2025",
-    description: "Executed data validation and analysis for financial and operational datasets in a data warehousing environment.",
+    description: "Executed data validation, financial analysis, and automated reporting in a large-scale data warehousing environment.",
     highlights: [
-      "Executed 50+ SQL validation tests ensuring 95% accuracy between source data and data marts",
-      "Analyzed 500k+ financial/operational rows to identify 10+ KPIs and revenue drivers",
-      "Co-created Business Requirement Documents (BRDs), reducing managers' data review time by 30%",
-      "Collaborated with developer team on data warehousing projects using Oracle and Hadoop",
+      "Executed 50+ SQL validation tests to reconcile source systems vs. data marts, ensuring 95% accuracy for downstream financial reporting",
+      "Analyzed 500K+ financial and operational records to define 10+ KPIs, uncover revenue drivers, and surface performance trends",
+      "Built and maintained Excel dashboards (PivotTables, Power Query, advanced formulas) to automate KPI reporting, reducing manual effort by 30%",
+      "Performed EDA in Python (Pandas, NumPy, Matplotlib/Seaborn) to profile data quality, identify outliers/missingness, and validate business assumptions",
     ],
     icon: Building2,
   },
@@ -31,11 +31,11 @@ const experiences: Experience[] = [
     organization: "Futures Center — The College of Liberal Arts & Sciences (ASU)",
     location: "Tempe, AZ",
     period: "Sep 2025 – Present",
-    description: "Analyzing graduate outcomes data to inform advising strategies through data-driven insights.",
+    description: "Analyzing graduate outcomes data to inform advising strategies through data-driven insights and statistical analysis.",
     highlights: [
-      "Analyzing datasets on 1000+ ASU graduates to identify post-graduation outcomes",
+      "Analyzing datasets on 1000+ ASU graduates to identify post-graduation outcomes (employment, grad school, internships)",
       "Conducting EDA with Python to detect trends/correlations that inform advising strategies",
-      "Delivering visualized reports/dashboards (Seaborn, Matplotlib) to enhance decision-making efficiency",
+      "Delivering visualized reports/dashboards (Seaborn, Matplotlib) to managers to enhance decision-making efficiency",
     ],
     icon: TrendingUp,
   },
@@ -43,11 +43,11 @@ const experiences: Experience[] = [
     title: "Director of Events & Operations",
     organization: "DevLabs, Arizona State University",
     location: "Tempe, AZ",
-    period: "April 2024 – Present",
-    description: "Leading organization of large-scale hackathons and tech events with 500+ participants.",
+    period: "April 2024 – Dec 2025",
+    description: "Led planning and execution of large-scale hackathons, workshops, and tech expos engaging 500+ students.",
     highlights: [
-      "Led planning and execution of 20+ hackathons, workshops, and expos engaging 500+ student community",
-      "Collaborated with marketing, finance, and operations teams for seamless logistics and budgeting",
+      "Led planning and execution of 20+ hackathons, workshops, and expos engaging a 500+ student community at ASU",
+      "Collaborated with marketing, finance, and operations teams to ensure seamless logistics and budgeting",
       "Developed scalable frameworks to expand DevLabs' reach and strengthen ASU's entrepreneurial ecosystem",
     ],
     icon: Users,
@@ -68,7 +68,7 @@ const ExperienceSection = () => {
           Experience
         </h2>
         <p className="text-muted-foreground max-w-2xl">
-          A track record of impact through data-driven analysis, leadership, and technical problem-solving.
+          A track record of impact through data-driven analysis, financial modeling, and technical problem-solving.
         </p>
       </motion.div>
 
@@ -83,14 +83,11 @@ const ExperienceSection = () => {
             className="bg-card rounded-xl p-6 md:p-8 shadow-sm border border-border hover:shadow-md transition-all duration-300"
           >
             <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-6">
-              {/* Icon */}
               <div className="flex-shrink-0">
                 <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
                   <exp.icon className="w-6 h-6 text-accent" />
                 </div>
               </div>
-
-              {/* Content */}
               <div className="flex-1">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                   <div>
