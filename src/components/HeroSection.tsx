@@ -51,7 +51,7 @@ const HeroSection = () => {
               <ExternalLink size={16} />
             </a>
             <a
-              href="/AdityaBohra_Resume.pdf"
+              href={`${import.meta.env.BASE_URL}AdityaBohra_Resume.pdf`}
               download="AdityaBohra_Resume.pdf"
               className="px-6 py-3 border border-accent text-accent rounded-lg font-medium hover:bg-accent/10 transition-all duration-300 flex items-center gap-2"
             >
