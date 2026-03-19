@@ -57,6 +57,7 @@ const Navigation = () => {
                   {link.label}
                 </a>
               ))}
+              <ThemeToggle />
             </div>
 
             {/* Mobile Menu Button */}
