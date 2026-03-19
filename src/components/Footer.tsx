@@ -5,11 +5,11 @@ const Footer = () => {
     <footer className="py-8 border-t border-border">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground font-mono">
-            © {currentYear} Aditya Bohra
+          <p className="text-sm text-muted-foreground">
+            © {currentYear} Aditya Bohra. All rights reserved.
           </p>
-          <p className="text-sm text-muted-foreground font-mono">
-            Built with <span className="text-accent">data</span> & precision.
+          <p className="text-sm text-muted-foreground">
+            Built with passion for data.
           </p>
         </div>
       </div>
