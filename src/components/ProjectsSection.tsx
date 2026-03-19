@@ -5,7 +5,7 @@ interface Project {
   title: string;
   description: string;
   techStack: string[];
-  githubUrl: string;
+  githubUrl?: string;
   liveUrl?: string;
   icon: typeof LineChart;
 }
@@ -94,15 +94,18 @@ const ProjectsSection = () => {
               ))}
             </div>
             <div className="flex items-center gap-4">
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors"
-              >
-                <Github size={16} />
-                <span>Source Code</span>
-              </a>
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors"
+                >
+                  <Github size={16} />
+                  <span>Source Code</span>
+                </a>
+              )}
+
               {project.liveUrl && (
                 <a
                   href={project.liveUrl}
